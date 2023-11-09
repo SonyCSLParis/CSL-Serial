@@ -12,8 +12,8 @@ You can find the original code for Blink and AnalogReadSerial [online](https://d
 ## Install the library
 
 ```
-git clone XXXXXXXX
-cd CSL-serial
+git clone https://github.com/SonyCSLParis/CSL-Serial.git
+cd CSL-Serial
 python setup.py develop
 ```
 
