@@ -1,4 +1,4 @@
-# CSL Serial
+# Control Serial
 
 If you have developed for the Arduino before, you most likely have used the [Serial](https://docs.arduino.cc/built-in-examples/basics/AnalogReadSerial) class to print messages and to send commands for your computer to the Arduino.
 
@@ -13,7 +13,7 @@ You can find the original code for Blink and AnalogReadSerial [online](https://d
 
 ```
 git clone https://github.com/SonyCSLParis/CSL-Serial.git
-cd CSL-Serial
+cd ControlSerial
 python setup.py develop
 ```
 
@@ -43,7 +43,7 @@ sys.path.append('../python')
 
 import time
 import argparse
-from CSLserial import ControlSerial
+from ControlSerial import ControlSerial
 
 remoteDevice = False
 
@@ -112,7 +112,7 @@ void handle_led(IRomiSerial *romiSerial, int16_t *args, const char *string_arg)
 
 We will go over the code above, step by step.
 
-The first two lines of the Python code make sure that you can run the example code from within the docs directory. If you installed the [CSLserial.py](CSLserial/CSLserial.py) file in your code directory, you will not need this.
+The first two lines of the Python code make sure that you can run the example code from within the docs directory. If you installed the [ControlSerial.py](ControlSerial/ControlSerial.py) file in your code directory, you will not need this.
 
 ```python
 import sys
@@ -124,7 +124,7 @@ lower-level functions of sending and receiving commands, and handling
 errors.
 
 ```python
-from CSLserial import ControlSerial
+from ControlSerial import ControlSerial
 ```
 
 We will create one instance of a ControlSerial that we will store in a
@@ -470,7 +470,7 @@ sys.path.append('../python')
 
 import time
 import argparse
-from CSLserial import ControlSerial
+from ControlSerial import ControlSerial
 
 remoteDevice = None
 

@@ -8,7 +8,7 @@ install_requires = [
 ]
 
 
-setup(name="CSLserial",
+setup(name="ControlSerial",
 version="0.0.1",
 description="Serial interface Arduino-Python",
 author="Peter Hanappe",

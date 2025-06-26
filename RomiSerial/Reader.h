@@ -31,7 +31,12 @@
 #ifndef __ssize_t_defined
 #ifndef	_SSIZE_T_DECLARED
 // Arduino 1.8.13 doesn't seem to define ssize_t
+// ESP32 may have different ssize_t handling
+#if defined(ESP32)
+#include <sys/types.h>
+#else
 typedef signed long ssize_t;
+#endif
 #endif
 #endif
 

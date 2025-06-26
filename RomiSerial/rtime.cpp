@@ -63,3 +63,27 @@ namespace romiserial {
 }
 
 #endif
+
+#if defined(ESP32)
+#include <esp_timer.h>
+
+namespace romiserial {
+    void rsleep(double duration) {
+        vTaskDelay(pdMS_TO_TICKS((int)(duration * 1000)));
+    }
+    
+    double rtime() {
+        return esp_timer_get_time() / 1000000.0;
+    }
+}
+#elif defined(ARDUINO)
+namespace romiserial {
+    void rsleep(double duration) {
+        delay((int)(duration * 1000));
+    }
+    
+    double rtime() {
+        return millis() / 1000.0;
+    }
+}
+#endif
